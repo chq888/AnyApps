@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AnyApps.Web;
 using AnyApps.Web.Controllers;
 
-namespace AnyApps.Tests.Controllers
+namespace AnyApps.Web.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

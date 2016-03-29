@@ -9,8 +9,8 @@
     <ProjectGuid>{C493E125-B451-4D1A-8D41-2B4B84ED3ECF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AnyApps.Tests</RootNamespace>
-    <AssemblyName>AnyApps.Tests</AssemblyName>
+    <RootNamespace>AnyApps.Web.Tests</RootNamespace>
+    <AssemblyName>AnyApps.Web.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AnyApps.Web\AnyApps.Web.csproj">
+      <Project>{52a298be-4a09-48ae-b68e-64730d6df52e}</Project>
+      <Name>AnyApps.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
