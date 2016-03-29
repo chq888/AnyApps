@@ -45,11 +45,13 @@ namespace AnyApps.Controllers.API
                 unitOfWork.SaveChanges();
             }
             */
+
+
             context = new AnyDbContext();
             _unitOfWorkAsync = new UnitOfWork(context);
             var context11 = (AnyDbContext)context;
+            /*
             var products = new List<Product>();
-
             for (var i = 0; i < 10; i++)
             {
                 products.Add(new Product
@@ -63,16 +65,19 @@ namespace AnyApps.Controllers.API
             IRepositoryAsync<Product> productRepository =  new Repository<Product>(context, _unitOfWorkAsync);
             productRepository.InsertGraphRange(products);
             _unitOfWorkAsync.SaveChanges();
+                        products.Clear();
+4
+            */
             _customerService = new ProductService(_unitOfWorkAsync.RepositoryAsync<Product>());
-            products.Clear();
         }
 
 
         // GET: api/TestApi
-        public IEnumerable<string> Get()
+        public IEnumerable<ProductData> Get()
         {
             IEnumerable<ProductData> ss = _customerService.GetProducts();
-            return new string[] { "value1", "value2" };
+
+            return ss;
         }
 
         [Route("{id}")]

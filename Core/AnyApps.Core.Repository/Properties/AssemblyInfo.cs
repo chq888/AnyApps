@@ -1,7 +1,12 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
+// NOTE: 
+/* 
+    current v3.3.5
+    date Mon Dec 22, 2014 at 2:00 PM
+    commit 3889f97a2429, Mar 13, 2015
+*/
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
