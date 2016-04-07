@@ -1,7 +1,6 @@
 ﻿using AnyApps.Core;
 using AnyApps.Core.Repository.DataContext;
 using AnyApps.Core.Repository.Ef;
-using AnyApps.Core.Repository.Infrastructure;
 using AnyApps.Core.Repository.Repositories;
 using AnyApps.Core.Repository.UnitOfWork;
 using AnyApps.DataModel;
@@ -19,6 +18,7 @@ namespace AnyApps.Controllers.API
 {
 
     [RoutePrefix("api/test")]
+    [Route("aaa/{action}")]
     public class TestApiController : ApiController
     {
         private readonly IProductService _customerService;
@@ -73,10 +73,10 @@ namespace AnyApps.Controllers.API
 
 
         // GET: api/TestApi
+        [Route("doaaa")]
         public IEnumerable<ProductData> Get()
         {
             IEnumerable<ProductData> ss = _customerService.GetProducts();
-
             return ss;
         }
 
