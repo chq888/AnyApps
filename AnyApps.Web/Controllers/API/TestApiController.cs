@@ -50,6 +50,25 @@ namespace AnyApps.Controllers.API
             context = new AnyDbContext();
             _unitOfWorkAsync = new UnitOfWork(context);
             var context11 = (AnyDbContext)context;
+
+            // 1. get data with no tracking 
+            // context11.Products.AsNoTracking().ToList<Product>();
+
+            
+            try
+            {
+                // context11.Entry.Entry(dept).Property(a => a.Name).CurrentValue
+                //http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
+            }
+            catch (System.Data.Entity.Infrastructure.DbUpdateConcurrencyException ue)
+            {
+                // ((IObjectContextAdapter)context11).ObjectContext.Refresh(System.Data.Entity.Core.Objects.RefreshMode.StoreWins, null);
+                /*
+                ((IObjectContextAdapter)context11).ObjectContext.Refresh(System.Data.Entity.Core.Objects.RefreshMode.ClientWins, null);
+                _context.SaveChanges();
+                */
+            }
+
             /*
             var products = new List<Product>();
             for (var i = 0; i < 10; i++)
