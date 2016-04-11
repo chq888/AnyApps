@@ -1,23 +1,21 @@
-namespace BeYourMarket.Core.Migrations
+namespace AnyApps.Entities.Migrations
 {
-    using AnyApps.Common;
+    using Common;
     using System;
-    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class ConfigurationInstall<T> : DbMigrationsConfiguration<T> where T: DbContext
+    internal sealed class Configuration : DbMigrationsConfiguration<AnyDbContext>
     {
-        public ConfigurationInstall()
+        public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = BeYourMarketConfigurationManager.AutomaticMigrationDataLossAllowed;
+            AutomaticMigrationDataLossAllowed = BeYourMarket.Core.BeYourMarketConfigurationManager.AutomaticMigrationDataLossAllowed;
             ContextKey = AnyConstants.CONTEXT_KEY;
-            TargetDatabase = new System.Data.Entity.Infrastructure.DbConnectionInfo(AnyConstants.CONNECTION_STRING);            
         }
 
-        protected override void Seed(T context)
+        protected override void Seed(AnyDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

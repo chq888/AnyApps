@@ -1,3 +1,4 @@
+using AnyApps.Common;
 using AnyApps.Core.Repository.Ef;
 using AnyApps.Entities.Mapping;
 using System.Data.Entity;
@@ -11,9 +12,9 @@ namespace AnyApps.Entities
             Database.SetInitializer<AnyDbContext>(null);
         }
 
-        public AnyDbContext() : base("Name=AnyDbContext")
+        public AnyDbContext() : base(AnyConstants.NAME_OR_CONNECTION_STRING)
         {
-        }        
+        }
 
         public DbSet<Product> Products { get; set; }
 
