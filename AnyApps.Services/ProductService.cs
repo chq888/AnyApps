@@ -1,11 +1,11 @@
-﻿using AnyApps.Core.Repository.Repositories;
-using AnyApps.Repository;
-using AnyApps.Core.Repository;
+﻿using AnyApps.Core.Repository;
+using AnyApps.Core.Repository.Repositories;
 using AnyApps.Core.Service;
-using System.Collections.Generic;
-using AnyApps.Entities;
 using AnyApps.DataModel;
+using AnyApps.Entities;
+using AnyApps.Repository;
 using AutoMapper;
+using System.Collections.Generic;
 
 namespace AnyApps.Services
 {

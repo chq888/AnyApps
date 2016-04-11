@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using AnyApps.Common;
 
 namespace AnyApps.Entities
 {
@@ -21,7 +22,7 @@ namespace AnyApps.Entities
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base(AnyConstants.CONNECTION_STRING, throwIfV1Schema: false)
         {
         }
         

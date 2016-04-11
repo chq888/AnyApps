@@ -89,6 +89,7 @@
     <Compile Include="AnyDbContext.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +109,10 @@
     <ProjectReference Include="..\Core\AnyApps.Core.Repository\AnyApps.Core.Repository.csproj">
       <Project>{9a700a64-66a4-43a4-bf9a-4cf4525f904a}</Project>
       <Name>AnyApps.Core.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\BeYourMarket.Core\BeYourMarket.Core.csproj">
+      <Project>{b5899d9b-49ed-4034-a52d-fc9d188c4873}</Project>
+      <Name>BeYourMarket.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
