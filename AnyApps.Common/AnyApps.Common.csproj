@@ -60,11 +60,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnyExtensions.cs" />
     <Compile Include="AutofacUtil\ConfigurationSettingsReaderConstants.cs" />
     <Compile Include="AutofacUtil\DynamicProxy2\ConstructorFinderWrapper.cs" />
     <Compile Include="AutofacUtil\DynamicProxy2\DynamicProxyContext.cs" />
     <Compile Include="AutofacUtil\DynamicProxy2\DynamicProxyExtensions.cs" />
     <Compile Include="AutofacUtil\LifetimeScopeContainer.cs" />
+    <Compile Include="AnyConstants.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="IMapper.cs" />
     <Compile Include="IRepository.cs" />

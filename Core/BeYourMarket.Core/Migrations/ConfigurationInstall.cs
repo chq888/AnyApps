@@ -1,5 +1,6 @@
 namespace BeYourMarket.Core.Migrations
 {
+    using AnyApps.Common;
     using System;
     using System.Configuration;
     using System.Data.Entity;
@@ -12,9 +13,8 @@ namespace BeYourMarket.Core.Migrations
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = BeYourMarketConfigurationManager.AutomaticMigrationDataLossAllowed;
-            ContextKey = "BeYourMarket.Model.Models.BeYourMarketContext";
-
-            TargetDatabase = new System.Data.Entity.Infrastructure.DbConnectionInfo("DefaultConnection");            
+            ContextKey = AnyConstants.CONTEXT_KEY;
+            TargetDatabase = new System.Data.Entity.Infrastructure.DbConnectionInfo(AnyConstants.CONNECTION_STRING);            
         }
 
         protected override void Seed(T context)

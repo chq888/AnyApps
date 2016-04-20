@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnyApps.Common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -44,15 +45,13 @@ namespace BeYourMarket.Core.Migrations
             Thread.Sleep(3000);
 
             // This is needed. Otherwise the updates do not show up in ConfigurationManager
-            ConfigurationManager.RefreshSection("connectionStrings");
+            ConfigurationManager.RefreshSection(AnyConstants.CONNECTION_STRING_FILE_NAME);
         }
 
         public static string GetDefaultConnectionString()
         {
             var configuration = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~");
-
-            var connectionString = configuration.ConnectionStrings.ConnectionStrings["DefaultConnection"];
-
+            var connectionString = configuration.ConnectionStrings.ConnectionStrings[AnyConstants.CONNECTION_STRING];
             return connectionString == null ? string.Empty : connectionString.ConnectionString;
         }
 
